@@ -1,0 +1,13 @@
+This are some useful commands for linux based server
+
+################################ Server Nginx engine ######################
+
+To increase uploading capacity of server using nginx engine use
+
+-> cd /etc/nginx/nginx.conf
+*Redirect to http /server /location (where ever you want to increase the size)
+-> client_max_body_size FILESIZE;  (FILESIZE is the size of file (casesensitive))
+
+Then restart server by running command 
+-> sudo systemctl reload nginx OR sudo nginx -s reload
+

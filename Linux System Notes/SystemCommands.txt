@@ -1,0 +1,18 @@
+This are some important Commands of linux system to keep in mind
+
+############################ DNS Conf ##########################
+
+-> sudo systemctl stop systemd-resolved service
+-> sudo systemctl disable systemd-resolved service
+
+In order to edit edit dns conf file use
+
+-> sudo nano /etc/resolv.conf
+
+at nameserver loc you can change the dns server config s
+
+####################### FILE CONF #############################
+
+To give the file max permission user
+
+-> sudo chmod u+x {file name}
