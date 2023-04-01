@@ -17,3 +17,25 @@ To run a new command in a running container
     --user , -u		Username or UID (format: <name|uid>[:<group|gid>])
     --workdir , -w		Working directory inside the container
     --help		Print usage
+
+To remove unnessasary docker images
+-> docker system prune
+
+To check logs of the given container
+-> docker logs {{Container-name}}
+
+To move out particular folder or file from docker container to system 
+-> To fulfill this type of requierment we have 2 options 
+
+    1-> Manually
+        In case we have to move only one file/folder from docker container to local system
+        we can user docker cp command
+        -> docker cp {{container_id}}:/path/of/file  /path/of/system/loc/{{filename}}
+
+    2-> Automated
+        In case we have to move all the file/folder that are generated into docker containter
+        then we can build DockerFile and user volumes tag for the same
+        -> volumes:
+           - destination/path/of/system:source/path/of/docker/container
+
+    
